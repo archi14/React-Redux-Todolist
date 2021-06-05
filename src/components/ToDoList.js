@@ -9,12 +9,13 @@ class ToDoList extends React.Component{
     renderedItem () {
         if(this.props.todolist.length===0)
         {
-            return <div>Add item to your to Do list!</div>
+            return <div>Add item to your your Do list!</div>
         }
 
         return this.props.todolist.map((item)=>{
             return (
                 <div className="item" key={this.props.todolist.indexOf(item)} >
+                    <div className="right floated content">
                         <div onClick={()=>this.props.delete_item(item)} className="ui button"> Delete </div>
                     </div>
                     <div className="left floated content"> {item}</div>  
